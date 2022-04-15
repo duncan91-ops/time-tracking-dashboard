@@ -1,0 +1,31 @@
+<article [ngClass]="getBackground()" class="article">
+  <div class="icon-container">
+    <img [src]="report.icon" alt="icon" class="icon" />
+  </div>
+  <div class="report">
+    <div class="top">
+      <h2 class="report__title">{{ report.title }}</h2>
+      <button class="btn">
+        <img
+          src="/assets/images/icon-ellipsis.svg"
+          alt="ellipsis"
+          class="btn ellipsis"
+        />
+      </button>
+    </div>
+    <div class="bottom">
+      <p class="current">
+        {{ report.timeframes[selectedTimeframe].current }}hrs
+      </p>
+      <p class="previous">
+        {{
+          (selectedTimeframe === "daily" && "yesterday") ||
+            (selectedTimeframe === "weekly" && "last week") ||
+            (selectedTimeframe === "monthly" && "last month")
+        }}
+        -
+        {{ report.timeframes[selectedTimeframe].previous }}hrs
+      </p>
+    </div>
+  </div>
+</article>

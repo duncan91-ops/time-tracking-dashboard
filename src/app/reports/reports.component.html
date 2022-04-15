@@ -1,0 +1,52 @@
+<main class="main">
+  <div class="container">
+    <header class="header">
+      <div class="person">
+        <div class="avatar-container">
+          <img
+            src="/assets/images/image-jeremy.png"
+            alt="avatar"
+            class="avatar"
+          />
+        </div>
+        <h1 class="heading-primary">
+          <span>Report for</span>
+          <span class="name">Jeremy Robson</span>
+        </h1>
+      </div>
+      <div class="btn-container">
+        <button
+          type="button"
+          [ngClass]="selectedTimeframe === 'daily' ? 'active' : ''"
+          class="btn"
+          (click)="selectedTimeframe = 'daily'"
+        >
+          daily
+        </button>
+        <button
+          type="button"
+          [ngClass]="selectedTimeframe === 'weekly' ? 'active' : ''"
+          class="btn"
+          (click)="selectedTimeframe = 'weekly'"
+        >
+          weekly
+        </button>
+        <button
+          type="button"
+          class="btn"
+          [ngClass]="selectedTimeframe === 'monthly' ? 'active' : ''"
+          (click)="selectedTimeframe = 'monthly'"
+        >
+          monthly
+        </button>
+      </div>
+    </header>
+    <section class="section">
+      <app-report
+        [report]="report"
+        [selectedTimeframe]="selectedTimeframe"
+        *ngFor="let report of reports"
+      ></app-report>
+    </section>
+  </div>
+</main>

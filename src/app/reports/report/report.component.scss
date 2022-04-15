@@ -1,0 +1,130 @@
+@import "../../../assets/sass/variables";
+
+.article {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 16.2rem;
+}
+
+.yellow {
+  background-color: $primaryLightRed;
+}
+
+.blue {
+  background-color: $primarySoftBlue;
+}
+
+.red {
+  background-color: $secondaryLightRed;
+}
+
+.green {
+  background-color: $primaryLimeGreen;
+}
+
+.violet {
+  background-color: $primaryViolet;
+}
+
+.orange {
+  background-color: $primarySoftOrange;
+}
+
+.icon-container {
+  width: 7.5rem;
+  height: 7.5rem;
+  transform: translate(-15%, -8%);
+}
+
+.icon {
+  width: 100%;
+}
+
+.report {
+  width: 100%;
+  margin-top: 3rem;
+  background-color: $neutralDarkBlue;
+  border-radius: 15px;
+  position: absolute;
+  // top: 1rem;
+  left: 0;
+  bottom: 0;
+  padding: 2rem;
+  height: 13.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+}
+
+.report:hover {
+  cursor: pointer;
+  background-color: darken($neutralDesaturatedBlue, 30%);
+}
+
+.top,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top {
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.bottom {
+  align-items: center;
+}
+
+.report__title {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 400;
+  font-family: $font-primary;
+}
+
+.current {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.previous {
+  font-family: $font-primary;
+  font-size: 1.8rem;
+  color: $neutralPaleBlue;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 1200px) {
+  .article {
+    height: 24.4rem;
+  }
+
+  .icon-container {
+    transform: translate(-15%, -12%);
+  }
+
+  .report {
+    height: 21rem;
+  }
+
+  .top {
+    margin-bottom: 2rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .current {
+    font-family: $font-primary;
+    font-size: 6.8rem;
+    font-weight: 300;
+  }
+}
