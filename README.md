@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://time-tracking-dashboard-rust.vercel.app/)
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/time-tracking-dashboard-solution-with-angular-and-typescript-BklIunZPEc)
+- Live Site URL: [Live Site](https://time-tracking-dashboard-rust.vercel.app/)
 
 ## My process
 
